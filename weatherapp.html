@@ -14,7 +14,8 @@
 
 </head>
 
-<body>
+<body style="background-color: midnightblue ;">
+
     <div class="header"
         style="background-color: lightsteelblue; height: 10%; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
         <h1> Weather App </h1>
@@ -24,7 +25,7 @@
 
 
     <div class="card" style="background-color: midnightblue;">
-        <div class="row">
+        <div class="row" style="margin-left: 25px;">
             <userSearch>
                 <!-- i put identifying syntax in so that i can eit everything in a cleaner fasion
                 the below is the search button -->
@@ -69,48 +70,53 @@
                                 <div class="card-header" id="dayOne">Date</div>
                                 <!-- thsi is day one of the five days. The ids are what i will use for innerhtml() to append the html called from the api -->
                                 <div class="card-body">
-                                    <h5 class="card-title">image</h5>
-                                    <p class="card-text">Temp</p>
+                                    <h5 class="card-title" id="statusImage">image</h5>
+                                    <p class="card-text" id="dayOneTemp">Temp</p>
+                                    <p class="card-text" id="dayOneHum">Hum</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="dayTwo">Header</div>
+                                <div class="card-header" id="dayTwo">Date</div>
                                 <!-- day two fo the five day -->
                                 <div class="card-body">
-                                    <h5 class="card-title">Primary card title</h5>
-                                    <p class="card-text">not much text</p>
+                                    <h5 class="card-title" id="statusImage">image</h5>
+                                    <p class="card-text" id="dayOneTemp">Temp</p>
+                                    <p class="card-text" id="dayOneHum">Hum</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="dayThree">Header</div>
+                                <div class="card-header" id="dayThree">Date</div>
                                 <!-- day three of the five day -->
                                 <div class="card-body">
-                                    <h5 class="card-title">Primary card title</h5>
-                                    <p class="card-text">not much text</p>
+                                    <h5 class="card-title" id="statusImage">image</h5>
+                                    <p class="card-text" id="dayOneTemp">Temp</p>
+                                    <p class="card-text" id="dayOneHum">Hum</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="dayFour">Header</div>
+                                <div class="card-header" id="dayFour">Date</div>
                                 <!-- day four of the five day -->
                                 <div class="card-body">
-                                    <h5 class="card-title">Primary card title</h5>
-                                    <p class="card-text">not much text</p>
+                                    <h5 class="card-title" id="statusImage">image</h5>
+                                    <p class="card-text" id="dayOneTemp">Temp</p>
+                                    <p class="card-text" id="dayOneHum">Hum</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-2">
                             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header" id="dayFive">Header</div>
+                                <div class="card-header" id="dayFive">Date</div>
                                 <!-- dayFive of the five day -->
                                 <div class="card-body">
-                                    <h5 class="card-title">Primary card title</h5>
-                                    <p class="card-text">not much text</p>
+                                    <h5 class="card-title" id="statusImage">image</h5>
+                                    <p class="card-text" id="dayOneTemp">Temp</p>
+                                    <p class="card-text" id="dayOneHum">Hum</p>
                                 </div>
                             </div>
                         </div>
@@ -120,19 +126,13 @@
             </weatherdata>
         </div>
     </div>
-
-
-
-
-
-
-
-
     </second>
-    </div>
-    <!-- there is a thin gray line under my stuff... that i cant find... and i dont know why... -->
+    <script type="text/javascript">
 
-    </div>
+
+    var queryUrl= "api.openweathermap.org/data/2.5/forecast?q="+userSearch+"&appid={ your api key }""
+
+    </script>
 
 
 
