@@ -77,7 +77,14 @@ $(document).ready(function () {
             var dayFiveBase = JSON.parse(data.weatherdata.forecast.list[5])
 
             // changing day 1 card
-            var dayOneDate = day
+            var dayOneDate = dayOneBase.time.from
+            $("dayOne").html(dayOneDate)
+            var statusImageOne = dayOneBase.symbol
+            $("statusImageOne").html(statusImageOne)
+            var outOneTemp = dayOneBase.temperature.value
+            $("dayOneTemp").html(outOneTemp)
+            var outOneHum = dayOneBase.humidity.value
+            $("dayOneHum").html(outOneHum)
 
 
 
