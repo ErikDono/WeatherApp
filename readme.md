@@ -19,15 +19,15 @@ i was ultilately unable to pull from local storage.
 here is a photo of my website:
 
 
-    ! [my_website](./website.png)
+    ![my_website](./assets/website.png)
 
 the local storage issue happened here:
 
-! [local_storage_issue](./localstorage.png)
+![local_storage_issue](./assets/localstorage.png)
 
 but, i know that my AJAX was pulling correctly because of my console log
 
-! [console_ajax](./ajaxconsole.png)
+![console_ajax](./assets/ajaxconsole.png)
 
 i tried to write out how i would getItem from local storage after, but had no way of testing it to see if it would work. 
 
