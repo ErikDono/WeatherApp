@@ -39,13 +39,14 @@ $(document).ready(function () {
             dataType: "jsonp",
             success: function (data) {
                 console.log(data)
-                localStorage.setItem(JSON("data", data))
+                localStorage.setItem("data", data)
+                // i dont think the above works... sadly... im going to continue as if it does.
             }
 
         }).then(function (response) {
             console.log(data)
             // pulling the city out of the data
-            var baseOrig = JSON.parse(data.weatherdata.forecast.list[0])
+            var baseOrig = localStorage.getItem(JSON.parse(data.weatherdata.forecast.list[0]))
             var cityOut = baseOrig.location.name
             // changing the city inner html
             $("#city").html(cityOut)
@@ -66,25 +67,66 @@ $(document).ready(function () {
             $("currentWind").html(windOut)
 
             // pulling data for the first day
-            var dayOneBase = JSON.parse(data.weatherdata.forecast.list[1])
+            var dayOneBase = localStorage.getItem(JSON.parse(data.weatherdata.forecast.list[1]))
             // pulling data for second day
-            var dayTwoBase = JSON.parse(data.weatherdata.forecast.list[2])
+            var dayTwoBase = localStorage.getItem(JSON.parse(data.weatherdata.forecast.list[2]))
             // pulling data for third day
-            var dayThreeBase = JSON.parse(data.weatherdata.forecast.list[3])
+            var dayThreeBase = localStorage.getItem(JSON.parse(data.weatherdata.forecast.list[3]))
             // pulling data for fourth day
-            var dayFourBase = JSON.parse(data.weatherdata.forecast.list[4])
+            var dayFourBase = localStorage.getItem(JSON.parse(data.weatherdata.forecast.list[4]))
             // pulling dat for fifth day
-            var dayFiveBase = JSON.parse(data.weatherdata.forecast.list[5])
+            var dayFiveBase = localStorage.getItem(JSON.parse(data.weatherdata.forecast.list[5]))
 
             // changing day 1 card
             var dayOneDate = dayOneBase.time.from
             $("dayOne").html(dayOneDate)
-            var statusImageOne = dayOneBase.symbol
-            $("statusImageOne").html(statusImageOne)
+            var outImageOne = dayOneBase.symbol
+            $("statusImageOne").html(outImageOne)
             var outOneTemp = dayOneBase.temperature.value
             $("dayOneTemp").html(outOneTemp)
             var outOneHum = dayOneBase.humidity.value
             $("dayOneHum").html(outOneHum)
+
+            // chanigng day 2 card
+            var dayTwoOut = dayTwoBase.time.from
+            $("dayTwo").html(dayTwoOut)
+            var outImageTwo = dayTwoBase.symbol
+            $("statusImageTwo").html(outImageTwo)
+            var outTwoTemp = dayTwoBase.temperature.value
+            $("dayTwoTemp").html(outTwoTemp)
+            var outTwoHum = dayTwoBase.humidity.value
+            $("dayTwoHum").html(outTwoHum)
+
+            // changing day 3 card 
+            var dayThreeOut = dayThreeBase.time.from
+            $("dayThree").html(dayThreeOut)
+            var outImageThree = dayThreeBase.symbol
+            $("statusImageThree").html(outImagethree)
+            var outThreeTemp = dayTwoBase.temperature.value
+            $("dayThreeTemp").html(outThreeTemp)
+            var outThreeHum = dayTwoBase.humidity.value
+            $("dayThreeHum").html(outThreeHum)
+
+            // changing day 4 card 
+            var dayFourOut = dayFourBase.time.from
+            $("dayFour").html(dayFourOut)
+            var outImageFour = dayFourBase.symbol
+            $("statusImageFour").html(outImageFour)
+            var outFourTemp = dayFourBase.temperature.value
+            $("dayFourTemp").html(outFourTemp)
+            var outFourHum = dayFourBase.humidity.value
+            $("dayFourHum").html(outFourHum)
+
+            // changing day 5 card
+
+            var dayFiveOut = dayFiveBase.time.from
+            $("dayFive").html(dayFiveOut)
+            var outFiveTwo = dayFiveBase.symbol
+            $("statusImageFive").html(outImageFive)
+            var outFiveTemp = dayFiveBase.temperature.value
+            $("dayFiveTemp").html(outFiveTemp)
+            var outFiveHum = dayFiveBase.humidity.value
+            $("dayFiveHum").html(outFiveHum)
 
 
 
