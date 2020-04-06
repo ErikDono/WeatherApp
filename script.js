@@ -191,5 +191,14 @@ $(document).ready(function () {
             }
 
         })
+
+
+
+
+        // im realzing last minute that these were supposed to be based off search history, and not random cities that i like... doh... 
+        // in order to do that, i would have set the local storage items to an aray, and used a for loop to iterate through.
+        //  I would set this equal to a var, which woudl then .html append onto the ul div that i currently have.  
+
+
     })
 })
