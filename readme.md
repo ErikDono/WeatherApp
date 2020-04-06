@@ -22,7 +22,7 @@ here is a photo of my website: ![mywebsite](./assets/website.png)
 
 the local storage issue happened here:
 
-![local_storage_issue](./assets/localstorage.png)
+![local_storage_issue](./assets/Localstorage.png)
 
 but, i know that my AJAX was pulling correctly because of my console log
 
