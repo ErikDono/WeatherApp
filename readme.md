@@ -15,10 +15,10 @@ This is going to be a weather app, in which the user will be able to do the foll
 
 i was ultilately unable to pull from local storage. 
 
-here is a photo of my website:
+here is a photo of my website: ![mywebsite](./assets/website.png)
 
 
-    ![my_website](./assets/website.png)
+    
 
 the local storage issue happened here:
 
