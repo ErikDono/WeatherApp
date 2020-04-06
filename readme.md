@@ -12,7 +12,6 @@ This is going to be a weather app, in which the user will be able to do the foll
 - I am again presented with current and future conditions for that city
 - I open the weather dashboard
 - I am presented with the last searched city forecast
-```
 
 i was ultilately unable to pull from local storage. 
 
